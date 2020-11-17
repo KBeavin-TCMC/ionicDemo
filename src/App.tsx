@@ -25,6 +25,8 @@ import '@ionic/react/css/display.css';
 import './theme/variables.css';
 
 import HomePage from './pages/HomePage';
+import BlogPage from './pages/BlogPage';
+import MapPage from './pages/MapPage';
 
 const App: React.FC = () => {
 
@@ -34,8 +36,10 @@ const App: React.FC = () => {
         <IonSplitPane contentId="main">
           <Menu />
           <IonRouterOutlet id="main">
-            <Route path="/page/:name" component={HomePage} exact />
-            <Redirect from="/" to="/page/HomePage" exact />
+            <Route path="/HomePage" component={HomePage} exact />
+            <Route path="/BlogPage" component={BlogPage} exact />
+            <Route path="/MapPage" component={MapPage} exact />
+            <Redirect from="/" to="/HomePage" exact />
           </IonRouterOutlet>
         </IonSplitPane>
       </IonReactRouter>
